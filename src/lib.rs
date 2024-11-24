@@ -1,3 +1,5 @@
+mod screencapturekit;
+
 use gst::glib;
 
 gst::plugin_define!(
@@ -5,13 +7,14 @@ gst::plugin_define!(
     env!("CARGO_PKG_DESCRIPTION"),
     init,
     concat!(env!("CARGO_PKG_VERSION"), "-", env!("COMMIT_ID")),
-    "MIT/X11",
+    "MIT",
     env!("CARGO_PKG_NAME"),
     env!("CARGO_PKG_NAME"),
     env!("CARGO_PKG_REPOSITORY"),
     env!("BUILD_REL_DATE")
 );
 
-pub fn init(_plugin: &gst::Plugin) -> Result<(), glib::BoolError> {
+pub fn init(plugin: &gst::Plugin) -> Result<(), glib::BoolError> {
+    screencapturekit::register(plugin)?;
     Ok(())
 }

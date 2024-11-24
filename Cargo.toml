@@ -3,7 +3,7 @@
 name = "gst-screencapturekit"
 version = "0.1.0"
 authors = ["Per Johansson <per@doom.fish>"]
-repository = "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs"
+repository = "https://github.com/doom-fish/gst-screencapturekit"
 license = "MIT OR Apache-2.0"
 edition = "2021"
 description = "Screencapturekit for gstreamer"
