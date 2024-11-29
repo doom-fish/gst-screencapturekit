@@ -9,13 +9,14 @@ edition = "2021"
 description = "Screencapturekit for gstreamer"
 
 [dependencies]
+screencapturekit = { path = "../screencapturekit-rs", version = "0.3" }
 gst = { package = "gstreamer", git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs" }
 gst-base = { package = "gstreamer-base", git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs" }
 gst-video = { package = "gstreamer-video", git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs" }
 
 [lib]
-name = "gstscreencapturekit"
-crate-type = ["cdylib", "rlib"]
+name = "screencapturekit"
+crate-type = ["cdylib"]
 path = "src/lib.rs"
 
 [build-dependencies]
