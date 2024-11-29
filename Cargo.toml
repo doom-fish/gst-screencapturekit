@@ -20,4 +20,4 @@ crate-type = ["cdylib"]
 path = "src/lib.rs"
 
 [build-dependencies]
-gst-plugin-version-helper = { git = "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs" }
+gst-plugin-version-helper = { git = "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs", version="0.8" }
